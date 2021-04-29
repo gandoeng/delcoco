@@ -1,0 +1,146 @@
+@charset "utf-8";
+.menu{
+	background-color:transparent;
+	border:none;
+}
+
+.menu_list{
+	text-align:center;
+	float:none;
+	font-family:'Helveticamedium';
+	width:100%;
+	max-width:1400px;
+}
+
+.menu_list li{
+	float:none;
+	display:inline-block;
+}
+
+.menu_list .fixed-width{
+	width:10%;
+}
+
+.menu_list .stripe a{
+	padding:0;
+}
+
+.menu_list li.active {
+	background-color:transparent;
+	border-bottom:3px solid #00a650;
+}
+
+.menu .menu_list li.active:before{
+	border-color:transparent transparent #00a650 transparent;
+}
+
+.menu_list li.active:before{
+	position:absolute;
+	bottom:0;
+	left:45%;
+	width:0;
+	height:0;
+	content:'';
+	border:3px solid #00a650;
+}
+
+.menu .menu_list li.active a, .menu .menu_list li.active a:hover {
+	background-color:transparent;
+}
+
+.navbar-nav.menu_list li a{
+	color:#494949;
+}
+
+.menu_list li a{
+	padding-top:10%;
+	padding-bottom:10%;
+	font-size:0.9vmax;
+}
+
+.menu_list .logo{
+	width:22%;
+	border:none;
+	padding:10px 17px;
+}
+
+.logo img{
+	width:100%;
+}
+
+.dropdown-menu{
+	min-width:auto;
+	background:transparent;
+	box-shadow:none;
+	padding:0;
+	right:0;
+}
+
+.dropdown-menu li{
+	display:block;
+}
+
+.dropdown-menu > li > a {
+    text-align:center;
+}
+
+.caret{
+	border-top:6px dashed #494949;
+	border-left:6px solid transparent;
+	border-right:6px solid transparent;
+}
+
+.mobile-logo{
+	display: none;
+}
+
+@media screen and (max-width:1024px){
+	.caret{
+		border-top:4px dashed #494949;
+		border-left:4px solid transparent;
+		border-right:4px solid transparent;
+	}
+}
+
+@media screen and (max-width:767px){	
+	.menu_list{
+		z-index:1000;
+	}
+	
+	.menu_list .fixed-width{
+		width:100%;
+	}
+	
+	.menu_list .stripe{
+		display:none;
+	}
+	
+	.menu_list li a{
+		padding-top:2%;
+		padding-bottom:2%;
+		font-size:11px;
+		text-align:right;
+	}
+	
+	.menu_list .logo{
+		display:none;
+	}
+	
+	.menu{
+		z-index: 10;
+	}
+	
+	.mobile-logo{
+		display: block;
+		position: absolute;
+		top: 9px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 1;
+	}
+	
+	.mobile-logo img{
+		width: 20%;
+	}
+}
